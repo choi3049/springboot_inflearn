@@ -1,11 +1,11 @@
-package hello.core.member;
+package hello.core.memberReview;
 
-public class Member {
+public class MemberReview {
     private Long id;
     private String name;
-    private Grade grade;  // Gradeタイプというのは列挙型でGradeファイルで列挙した変数を選べる
+    private GradeReview grade;  // Gradeタイプというのは列挙型でGradeファイルで列挙した変数を選べる
 
-    public Member(Long id, String name, Grade grade) {
+    public MemberReview(Long id, String name, GradeReview grade) {
         this.id = id;
         this.name = name;
         this.grade = grade;
@@ -27,11 +27,11 @@ public class Member {
         this.name = name;
     }
 
-    public Grade getGrade() {
+    public GradeReview getGrade() {
         return grade;
     }
 
-    public void setGrade(Grade grade) {
+    public void setGrade(GradeReview grade) {
         this.grade = grade;
     }
 }
