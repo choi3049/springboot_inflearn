@@ -1,31 +1,22 @@
 package hello.core.memberReview;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Component
 public class MemberServiceImplReview implements MemberServiceReview {
 
-    private final MemberRepositoryReview memberRepository;
+    private final MemberRepositoryReview memberRepositoryReview = new
+            MemoryMemberRepositoryReview();
 
-    @Autowired //ac.getBean(MemberRepository.class)
-    public MemberServiceImplReview(MemberRepositoryReview memberRepository) {
-        this.memberRepository = memberRepository;
-    }
-
-    @Override
     public void join(MemberReview member) {
-        memberRepository.save(member);
+        memberRepositoryReview.save(member);
     }
 
-    @Override
     public MemberReview findMember(Long memberId) {
-        return memberRepository.findById(memberId);
-    }
-
-    //test
-    public MemberRepositoryReview getMemberRepository() {
-        return memberRepository;
+        return memberRepositoryReview.findById(memberId);
     }
 
 }

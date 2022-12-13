@@ -2,7 +2,7 @@ package hello.core.memberReview;
 
 public interface MemberRepositoryReview {
 
-    void save(MemberReview member);
+    void save(MemberReview memberReview);
 
     MemberReview findById(Long memberId);
 }
