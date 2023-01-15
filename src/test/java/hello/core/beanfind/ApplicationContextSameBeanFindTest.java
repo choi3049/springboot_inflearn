@@ -43,7 +43,7 @@ public class ApplicationContextSameBeanFindTest {
     }
 
     @Configuration
-    static class SameBeanConfig {
+    static class SameBeanConfig { // test안에서만 사용할 빈 생성
 
         @Bean
         public MemberRepository memberRepository1() {
